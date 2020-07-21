@@ -1,0 +1,147 @@
+{
+  "housebasicinfo": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "buildingid": {
+        "type": "keyword"
+      },
+      "floors": {
+        "type": "integer"
+      },
+      "housenum": {
+        "type": "text"
+      },
+      "projectid": {
+        "type": "keyword"
+      },
+      "housestate": {
+        "type": "keyword"
+      },
+      "isdevelopervacancy": {
+        "type": "boolean"
+      },
+      "occupationtime": {
+        "type": "date"
+      },
+      "propertytype": {
+        "type": "keyword"
+      },
+      "billaddress": {
+        "type": "text"
+      },
+      "sealedstate": {
+        "type": "keyword"
+      },
+      "isownervacancy": {
+        "type": "boolean"
+      },
+      "rentstate": {
+        "type": "keyword"
+      },
+      "area": {
+        "type": "double"
+      },
+      "bedroomnumber": {
+        "type": "integer"
+      },
+      "sittingroonumber": {
+        "type": "integer"
+      },
+      "kitchennumber": {
+        "type": "integer"
+      },
+      "toiletnumber": {
+        "type": "integer"
+      },
+      "balconynumber": {
+        "type": "integer"
+      },
+      "decoratedtime": {
+        "type": "date"
+      },
+      "houselivingstate": {
+        "type": "keyword"
+      },
+      "investmenttype": {
+        "type": "keyword"
+      },
+      "transactiontime": {
+        "type": "date"
+      },
+      "buildingarea": {
+        "type": "double"
+      },
+      "vacancyreason": {
+        "type": "keyword"
+      },
+      "totalprices": {
+        "type": "double"
+      },
+      "contractor": {
+        "type": "double"
+      },
+      "contractdate": {
+        "type": "date"
+      },
+      "isanonymous": {
+        "type": "boolean"
+      },
+      "dataid": {
+        "type": "keyword"
+      },
+      "createsystemcode": {
+        "type": "keyword"
+      },
+      "insystemcode": {
+        "type": "keyword"
+      },
+      "createdon": {
+        "type": "date"
+      },
+      "createdby": {
+        "type": "keyword"
+      },
+      "modifiedon": {
+        "type": "date"
+      },
+      "modifiedby": {
+        "type": "keyword"
+      },
+      "isdeleted": {
+        "type": "boolean"
+      },
+      "version": {
+        "type": "keyword"
+      },
+      "communityid": {
+        "type": "keyword"
+      },
+      "usetype": {
+        "type": "keyword"
+      },
+      "housetype": {
+        "type": "keyword"
+      },
+      "housedigitnum": {
+        "type": "text"
+      },
+      "buildingnum": {
+        "type": "text"
+      },
+      "buildingname": {
+        "type": "text"
+      },
+      "projectname": {
+        "type": "text"
+      },
+      "pid": {
+        "type": "keyword"
+      },
+      "pcommunityid": {
+        "type": "keyword"
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+dataSourceKey: defaultDS
+destination: example
+esMapping:
+  _index: mdm_house
+  _type: housebasicinfo
+  _id: id
+#  pk: id
+
+  # ***sql 务必让表和字段的大小写和数据库定义的一直，否则会出现一些问题。***
+  sql: "
+      SELECT
+      h.Id                 AS id,
+      h.BuildingId         AS buildingid,
+      h.Floors             AS floors,
+      h.HouseNum           AS housenum,
+      h.IdProjectInfo      AS projectid,
+      h.HouseState         AS housestate,
+      h.isDeveloperVacancy AS isdevelopervacancy,
+      h.OccupationTime     AS occupationtime,
+      h.PropertyType       AS propertytype,
+      h.BillAddress        AS billaddress,
+      h.SealedState        AS sealedstate,
+      h.IsOwnerVacancy     AS isownervacancy,
+      h.RentState          AS rentstate,
+      h.Area               AS area,
+      h.BedroomNumber      AS bedroomnumber,
+      h.SittingRoomNumber  AS sittingroonumber,
+      h.KitchenNumber      AS kitchennumber,
+      h.ToiletNumber       AS toiletnumber,
+      h.BalconyNumber      AS balconynumber,
+      h.DecoratedTime      AS decoratedtime,
+      h.HouseLivingState   AS houselivingstate,
+      h.InvestmentType     AS investmenttype,
+      h.TransactionTime    AS transactiontime,
+      h.BuildingArea       AS buildingarea,
+      h.VacancyReason      AS vacancyreason,
+      h.TotalPrices        AS totalprices,
+      h.Contractor         AS contractor,
+      h.ContractDate       AS contractdate,
+      h.IsAnonymous        AS isanonymous,
+      h.DataId             AS dataid,
+      h.CreateSystemCode   AS createsystemcode,
+      h.InSystemCode       AS insystemcode,
+      h.CreatedOn          AS createdon,
+      h.CreatedBy          AS createdby,
+      h.ModifiedOn         AS modifiedon,
+      h.ModifiedBy         AS modifiedby,
+      h.IsDeleted          AS isdeleted,
+      h.Version            AS version,
+      h.CommunityId        AS communityid,
+      h.UseType            AS usetype,
+      h.HouseType          AS housetype,
+      h.HouseDigitNum      AS housedigitnum,
+      b.BuildingNum        AS buildingnum,
+      b.BuildingName       AS buildingname,
+      c.Name               AS projectname,
+      p.Id                 AS pid,
+      p.CommunityId        AS pcommunityid
+    FROM HouseBasicInfo h
+      LEFT JOIN BuildingBasicInfo b ON h.BuildingId = b.Id
+      LEFT JOIN CommunityProjectInfo p ON p.Id = b.IdProjectInfo
+      LEFT JOIN CommunityInitInfo c ON c.Id = p.CommunityId
+     "
+  #objFields:
+  etlCondition: "where h.ModifiedOn>='{0}'"
+  commitBatch: 3000
+
+
+  enablefieldmap: true
+  mappingfilename: "mytest_user.json"
+

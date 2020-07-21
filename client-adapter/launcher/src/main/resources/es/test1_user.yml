@@ -1,0 +1,13 @@
+dataSourceKey: localDS
+destination: example
+esMapping:
+  _index: test1
+  _type: user
+  _id: id
+#  pk: id
+  sql: "select id,name,c_time,role_id from user"
+  #objFields:
+  #sql: "select id,name,c_time from user"
+  enablefieldmap: true
+  etlCondition: ""
+  commitBatch: 3000
